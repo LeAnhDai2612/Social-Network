@@ -3,6 +3,8 @@ Simple photo-sharing social media platform built with LAMP Stack & Bootstrap
 
 📚 About
 Social Network  is a simple full-stack social media platform built with PHP, MySQL, and Bootstrap, serving as an example of implementing the core functionalities within a social media platform.
+
+
 🛠️ Technologies
 PHP
 MySQL
@@ -11,6 +13,8 @@ JavaScript
 CSS
 Bootstrap
 Cloudinary API
+
+
 ⚙️ Installation and Setup
 To install and set up the project, follow the instructions below:
 
