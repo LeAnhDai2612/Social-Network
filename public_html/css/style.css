@@ -1,0 +1,1105 @@
+body {
+  overflow: visible !important;
+}
+
+/* Modal open state */
+body.modal-open {
+  overflow: hidden !important;
+}
+
+/* Preloading */
+body.preload * {
+  animation-duration: 0s !important;
+  -webkit-animation-duration: 0s !important;
+  transition: background-color 0s, opacity 0s, color 0s, width 0s, height 0s,
+    padding 0s, margin 0s !important;
+}
+
+/* Profile setup */
+#edit-profile-form,
+#setup-profile-form {
+  max-width: 470px !important;
+}
+
+.edit-profile-card {
+  width: 100% !important;
+}
+
+.profile-picture-picker-image {
+  height: 72px;
+  width: 72px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.choose-profile-picture-label:hover {
+  cursor: pointer;
+  pointer-events: all !important;
+}
+
+/* JustValidate errors */
+.just-validate-error-label {
+  margin: 3px 0 0 0;
+  font-size: 0.95rem;
+}
+
+/* Login */
+.container {
+  max-width: 65%;
+}
+
+#login-error {
+  display: none;
+}
+
+#login-error.visible {
+  display: block;
+}
+
+.login-card {
+  border: 0;
+  border-radius: 27.5px;
+  overflow: hidden;
+}
+
+.login-card-img {
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 670px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* Register */
+.register-card {
+  border: 0;
+  border-radius: 27.5px;
+  overflow: hidden;
+}
+
+.register-card-img {
+  border-radius: 0;
+  max-height: 675px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/* Sidebar */
+.sidebar {
+  margin-top: 89px !important;
+  width: 400px !important;
+  max-height: calc(100vh - 86px) !important;
+}
+
+.nav-item.active:after {
+  content: "";
+  width: 3px;
+  height: 24px;
+  background-color: var(--bs-gray-600) !important;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+}
+
+.nav-link-icon {
+  font-size: 1.3rem;
+}
+
+.sidebar-bio-text {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Home */
+.feed-container,
+.profile-info {
+  max-width: 640px;
+  width: 100%;
+}
+
+.page-register,
+.page-login,
+.page-home,
+.page-user-profile,
+.page-settings,
+.page-post {
+  min-height: calc(100vh - (88px + 76px));
+}
+
+.footer {
+  margin-left: 400px !important;
+}
+
+.page-login,
+.page-register,
+.page-profile-setup,
+.page-login + .footer,
+.page-register + .footer,
+.page-profile-setup + .footer {
+  margin-left: 0 !important;
+}
+
+.page-register,
+.page-login,
+.page-home,
+.page-user-profile,
+.page-post,
+.page-settings {
+  margin-top: 88px !important;
+}
+
+.home-navbar-user-profile-picture {
+  width: 90px;
+  height: 90px;
+  opacity: 1;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  transition: opacity 0.7s ease 0s;
+  box-shadow: none;
+}
+
+/* Feed */
+.post {
+  border-radius: 22px;
+  max-width: 1600px;
+}
+
+.feed-post-image {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+}
+
+.feed-card-profile-picture {
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 60px;
+  height: 60px;
+}
+
+.post-user-info,
+.dropdown-item {
+  cursor: pointer;
+}
+
+.post-more-options-menu-button {
+  cursor: pointer;
+}
+
+.post {
+  height: fit-content;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.post-chat-icon {
+  z-index: 100;
+}
+
+.likes-text-container {
+  z-index: 101;
+}
+
+/* Post like button */
+.con-like {
+  --red: rgb(255, 50, 100);
+  position: relative;
+  width: 22px;
+  height: 22px;
+}
+
+.con-like .like {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+}
+
+.con-like .checkmark {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.con-like .filled {
+  position: absolute;
+  display: none;
+}
+
+.con-like .celebrate {
+  position: absolute;
+  animation: none;
+  animation-fill-mode: forwards;
+  display: none;
+  cursor: default;
+}
+
+.con-like .poly {
+  stroke: var(--red);
+  fill: var(--red);
+}
+
+.con-like .like:checked ~ .checkmark .filled {
+  animation: kfr-filled 0.5s;
+  display: block;
+}
+
+.con-like .like:checked ~ .checkmark .celebrate {
+  animation: kfr-celebrate 0.5s;
+  animation-fill-mode: forwards;
+  display: block;
+}
+
+/* Search bar */
+.has-search .form-control {
+  padding-left: 38px;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  display: block;
+  width: 2.375rem;
+  height: 43px;
+  line-height: 38px;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+#search-results {
+  list-style: none;
+  position: absolute;
+  z-index: 1050 !important;
+  min-width: 300px;
+  max-width: 300px;
+  background-color: #ffffff;
+  border-radius: 0 0 5px 5px;
+}
+
+#search-results.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+.search-result-text.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-result-profile-picture {
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100%;
+}
+
+.search-result-item {
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.search-result-item:hover {
+  background-color: #e7e7e7;
+}
+
+.search-result-item:active {
+  background-color: #cecece;
+}
+
+/* Create post */
+.post-modal-image-container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.post-modal-image-container::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+#post-modal-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* User profile */
+.user-profile-profile-picture {
+  width: 177px;
+  height: 177px;
+  opacity: 1;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  transition: opacity 0.7s ease 0s;
+  box-shadow: none;
+}
+
+#user-profile-posts-amount {
+  cursor: pointer;
+}
+
+input[type="checkbox"].btn-check:checked + label .unfollow-text {
+  display: none;
+}
+
+input[type="checkbox"].btn-check:checked + label .follow-text {
+  display: inline-block;
+}
+
+input[type="checkbox"].btn-check + label .unfollow-text {
+  display: inline-block;
+}
+
+input[type="checkbox"].btn-check + label .follow-text {
+  display: none;
+}
+
+/*  Post page */
+.post-page-image {
+  border-radius: 22px;
+  max-height: 66vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page-post-profile-picture {
+  width: 72px;
+  height: 72px;
+  opacity: 1;
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  transition: opacity 0.7s ease 0s;
+  box-shadow: none;
+}
+
+/* Post likes modal */
+.post-likes-modal-profile-picture {
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 50px;
+  height: 50px;
+}
+
+/* Main */
+main {
+  margin-left: 400px !important;
+}
+
+/* Animations */
+@keyframes kfr-filled {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes kfr-celebrate {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+    display: none;
+  }
+}
+
+/* Dark Mode - toàn diện cho layout dùng Bootstrap */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --bg-secondary: #1e1e1e;
+  --border-color: #333333;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a, p, span, div, h1, h2, h3, h4, h5, h6, label, strong {
+  color: var(--text-color) !important;
+}
+
+body.dark-mode .bg-light,
+body.dark-mode .bg-white {
+  background-color: var(--bg-secondary) !important;
+}
+
+body.dark-mode .text-muted,
+body.dark-mode .text-dark {
+  color: var(--text-color) !important;
+}
+
+body.dark-mode .card,
+body.dark-mode .modal-content,
+body.dark-mode .navbar,
+body.dark-mode .sidebar {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+body.dark-mode .form-control,
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #1e1e1e !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+body.dark-mode .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Hiệu ứng chuyển mượt */
+body, .card, .navbar, .modal-content {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Force override text colors */
+body.dark-mode .text-dark,
+body.dark-mode .text-muted,
+body.dark-mode .text-secondary,
+body.dark-mode .text-body,
+body.dark-mode small,
+body.dark-mode span,
+body.dark-mode p {
+  color: #e0e0e0 !important;
+}
+body.dark-mode i, body.dark-mode svg {
+  color: #ffffff !important;
+}
+/* Override cho tất cả thẻ chữ bị ảnh hưởng */
+body.dark-mode nav,
+body.dark-mode a,
+body.dark-mode li,
+body.dark-mode ul,
+body.dark-mode h1, h2, h3, h4, h5, h6,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode .text-dark,
+body.dark-mode .text-body,
+body.dark-mode .text-muted,
+body.dark-mode .nav-link,
+body.dark-mode .dropdown-menu,
+body.dark-mode .btn-link {
+  color: #e0e0e0 !important;
+}
+
+/* Nếu cần: đổi màu border sidebar/menu dropdown */
+body.dark-mode .border,
+body.dark-mode .border-bottom {
+  border-color: #444 !important;
+}
+body.dark-mode .border-top {
+  border-top-color: #444 !important;
+}
+body.dark-mode .border-left {
+  border-left-color: #444 !important;
+}/* Dark mode cho ô tìm kiếm */
+body.dark-mode input.form-control {
+  background-color: #2c2c2c !important;
+  color: #f0f0f0 !important;
+  border-color: #555 !important;
+}
+
+/* Icon search */
+body.dark-mode .form-control-feedback {
+  color: #f0f0f0 !important;
+}
+
+/* Placeholder trong ô tìm kiếm */
+body.dark-mode input::placeholder {
+  color: #bbb !important;
+}
+
+/* Gợi ý tìm kiếm (autocomplete) */
+body.dark-mode #search-results {
+  background-color: #2c2c2c !important;
+  color: #fff !important;
+  border-color: #555 !important;
+}
+
+body.dark-mode #search-results li {
+  color: #fff !important;
+}
+body.dark-mode input.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(150, 150, 150, 0.25);
+}
+/* Dropdown menu dark mode */
+body.dark-mode .dropdown-menu {
+  background-color: #2c2c2c !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+body.dark-mode .dropdown-menu .dropdown-item {
+  color: #f0f0f0 !important;
+}
+
+body.dark-mode .dropdown-menu .dropdown-item:hover,
+body.dark-mode .dropdown-menu .dropdown-item:focus {
+  background-color: #444 !important;
+  color: #fff !important;
+}
+/* LIGHT MODE - giữ nguyên hoặc tuỳ chỉnh nếu muốn */
+.post-button-custom {
+  background-color: #454d59;
+  color: white;
+}
+
+.follow-button-custom {
+  border-color: #344052;
+  color: #2d3e58;
+}
+
+/* DARK MODE */
+body.dark-mode .post-button-custom {
+  background-color: #c0b7ad !important; /* Cam đậm */
+  border-color: #d6c6b8 !important;
+  color: white !important;
+}
+
+body.dark-mode .follow-button-custom {
+  border-color: #1dd1a1 !important; /* Xanh mint */
+  color: #1dd1a1 !important;
+}
+
+body.dark-mode .follow-button-custom:hover {
+  background-color: #1dd1a1 !important;
+  color: black !important;
+}
+/* Mặc định ở chế độ sáng */
+.follow-toggle-btn {
+  background-color: #cbd3de; /* Bootstrap blue */
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.follow-toggle-btn:hover {
+  background-color: #c1cad6;
+}
+
+/* DARK MODE */
+body.dark-mode .follow-toggle-btn {
+  background-color: #1dd1a1;
+  color: #000;
+}
+
+body.dark-mode .follow-toggle-btn:hover {
+  background-color: #10ac84;
+  color: #fff;
+}
+.upload-btn {
+  background-color: #f1f1f1;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.upload-btn:hover {
+  background-color: #e6e6e6;
+}
+
+/* Dark mode */
+body.dark-mode .upload-btn {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode .upload-btn:hover {
+  background-color: #444;
+}
+/* DARK MODE CHO FORM ĐĂNG BÀI */
+body.dark-mode .form-control,
+body.dark-mode textarea#post-modal-caption {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border-color: #444 !important;
+}
+
+/* Placeholder trong dark mode */
+body.dark-mode textarea#post-modal-caption::placeholder {
+  color: #aaa !important;
+}
+/* DARK MODE: dropdown fix */
+body.dark-mode .dropdown-menu {
+  background-color: #2c2c2c;
+  color: #fff;
+  border-color: #444;
+}
+
+body.dark-mode .dropdown-menu .dropdown-item {
+  color: #e0e0e0;
+}
+
+body.dark-mode .dropdown-menu .dropdown-item:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Icon 3 chấm dark mode */
+body.dark-mode .post-more-options-menu-button {
+  color: #ccc !important;
+}
+body.dark-mode .toast {
+  background-color: #333 !important;
+  color: white !important;
+  border: 1px solid #555;
+}
+
+body.dark-mode .btn-close {
+  filter: invert(1);
+}
+/* Comment container */
+.comment-item,
+.reply-item {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Username */
+.comment-item strong,
+.reply-item strong {
+  font-weight: 600;
+  color: #222;
+}
+
+/* Content */
+.comment-item .content,
+.reply-item .content {
+  display: inline-block;
+  margin-left: 4px;
+  color: #333;
+}
+
+/* Action buttons (edit/delete) */
+.comment-item button,
+.reply-item button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-left: 10px;
+  color: #007bff;
+  transition: all 0.2s ease-in-out;
+}
+
+.comment-item button:hover,
+.reply-item button:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Delete button red */
+.comment-item .delete-btn,
+.reply-item .delete-btn {
+  color: #dc3545;
+}
+
+.comment-item .delete-btn:hover,
+.reply-item .delete-btn:hover {
+  color: #b02a37;
+  text-decoration: underline;
+}
+
+/* Comment form */
+.add-comment-form {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.add-comment-form input[type="text"] {
+  flex-grow: 1;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+.add-comment-form input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+/* Send button */
+.add-comment-form button[type="submit"] {
+  background: linear-gradient(45deg, #00b4db, #0083b0);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-comment-form button[type="submit"]:hover {
+  background: linear-gradient(45deg, #0083b0, #00b4db);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 179, 219, 0.2);
+}
+.comment-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.add-comment-form input[type="text"] {
+    flex: 1;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.add-comment-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 6px 16px;
+    border: none;
+    border-radius: 6px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.add-comment-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.add-comment-form {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+}
+.reply-form {
+  margin-top: 6px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.reply-form input[type="text"] {
+  flex-grow: 1;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.reply-form button[type="submit"] {
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: none;
+  background-color: #198754; /* xanh lá Bootstrap */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.reply-form button[type="submit"]:hover {
+  background-color: #157347;
+}
+.reply-form {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.comment-item small,
+.reply-item small {
+    font-size: 11px;
+    color: #888;
+}
+.d-none {
+  display: none !important;
+}
+/* Light mode: ép màu đen */
+body:not(.dark-mode) .modal-title {
+  color: #000 !important;
+}
+
+/* Dark mode: giữ màu trắng */
+body.dark-mode .modal-title {
+  color: #fff !important;
+}
+/* DARK MODE cho comment box */
+body.dark-mode .comment-box input,
+body.dark-mode .reply-form input {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.dark-mode .comment-box input::placeholder,
+body.dark-mode .reply-form input::placeholder {
+  color: #ccc;
+}
+
+body.dark-mode .comment-item,
+body.dark-mode .reply-item {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border-color: #333;
+}
+
+body.dark-mode .comment-item .content,
+body.dark-mode .reply-item .content {
+  color: #ddd;
+}
+
+body.dark-mode .comment-item small,
+body.dark-mode .reply-item small {
+  color: #aaa;
+}
+
+body.dark-mode .reply-btn,
+body.dark-mode .edit-btn,
+body.dark-mode .delete-btn {
+  color: #00bfff !important;
+}
+
+body.dark-mode .toggle-comments-btn,
+body.dark-mode .toggle-replies-btn {
+  color: #bbb !important;
+}
+.chat-preview {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.chat-preview:hover {
+  background: #222;
+}
+.chat-preview.active {
+  background: #333;
+}
+#delete-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 9999;
+  display: none;
+  width: 200px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+/* === DARK MODE FIX CHO edit_profile.php bên phải === */
+.dark-mode .blocked-users-container {
+  background-color: #1f1f1f !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #444;
+}
+
+.dark-mode .blocked-users-container .list-group-item {
+  background-color: #2a2a2a !important;
+  color: #fff !important;
+  border-color: #444;
+}
+
+.dark-mode select,
+.dark-mode option {
+  background-color: #2a2a2a !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #555;
+}
+/* Fix phần danh sách người dùng bị chặn trong dark mode */
+.dark-mode .accordion-button,
+.dark-mode .accordion-body,
+.dark-mode .list-group-item {
+  background-color: #1f1f1f !important;
+  color: #f1f1f1 !important;
+  border-color: #444 !important;
+}
+
+.dark-mode .accordion-button::after {
+  filter: invert(1);
+}
+
+.dark-mode .btn-outline-warning {
+  color: #ffc107;
+  border-color: #ffc107;
+}
+
+.dark-mode .btn-outline-warning:hover {
+  background-color: #ffc107;
+  color: #000;
+}
+.dark-mode body,
+.dark-mode .body-container,
+.dark-mode .page-settings,
+.dark-mode main.container {
+  background-color: #121212 !important;
+  color: #f1f1f1;
+}
+/* AI Chat Bubble */
+#ai-chat-bubble {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--bs-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1040; /* Thấp hơn modal nhưng cao hơn nội dung thường */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+#ai-chat-bubble:hover {
+  transform: scale(1.1);
+}
+
+/* AI Chat Window */
+#ai-chat-window {
+  position: fixed;
+  bottom: 100px; /* Vị trí phía trên bubble */
+  right: 25px;
+  width: 350px;
+  max-width: 90vw;
+  height: 450px;
+  max-height: 70vh;
+  z-index: 1045;
+  display: none; /* Ẩn ban đầu */
+  flex-direction: column;
+  border: 1px solid var(--bs-border-color-translucent);
+  background-color: var(--bs-body-bg); /* Dùng màu nền body */
+}
+
+#ai-chat-window.show {
+  display: flex; /* Hiện khi có class 'show' */
+}
+
+#ai-chat-header {
+    background-color: var(--bs-tertiary-bg);
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--bs-border-color-translucent);
+}
+
+#ai-chat-header h6 {
+    color: var(--bs-heading-color);
+}
+
+#ai-chat-close {
+    padding: 0.25rem;
+    font-size: 0.8rem;
+}
+
+
+#ai-chat-messages {
+  flex-grow: 1; /* Chiếm hết không gian còn lại */
+  padding: 1rem;
+  background-color: var(--bs-secondary-bg); /* Nền khu vực chat */
+}
+
+#ai-chat-messages div {
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: var(--bs-primary);
+  color: white;
+  margin-left: auto; /* Căn phải */
+  border-bottom-right-radius: 0;
+}
+
+.ai-message {
+  background-color: var(--bs-tertiary-bg); /* Màu nền AI */
+  color: var(--bs-body-color); /* Màu chữ AI */
+  margin-right: auto; /* Căn trái */
+  border-bottom-left-radius: 0;
+}
+
+.ai-message.error {
+    background-color: var(--bs-danger-bg-subtle);
+    color: var(--bs-danger-text-emphasis);
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+
+#ai-chat-input-area {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--bs-border-color-translucent);
+  background-color: var(--bs-body-bg);
+}
+
+#ai-chat-input {
+    background-color: var(--bs-tertiary-bg);
+    color: var(--bs-body-color);
+    border-color: var(--bs-border-color);
+}
+#ai-chat-input::placeholder {
+     color: var(--bs-secondary-color);
+}
